@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rocket Launch Animation</title>
+	<style>
+		body {
+			background-color: #111;
+		}
+		
+		.rocket {
+			position: absolute;
+			top: 200px;
+			left: 50%;
+			transform: translateX(-50%);
+			animation: launch 3s ease-in-out infinite;
+		}
+		
+		.rocket:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 30px;
+			height: 100px;
+			background-color: #fff;
+			border-radius: 0 0 30px 30px;
+		}
+		
+		.rocket:after {
+			content: "";
+			position: absolute;
+			top: 100px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80px;
+			height: 60px;
+			background-color: #fff;
+			border-radius: 30px;
+		}
+		
+		@keyframes launch {
+			0% {
+				transform: translateY(0) rotateZ(0);
+			}
+			50% {
+				transform: translateY(-300px) rotateZ(10deg);
+			}
+			100% {
+				transform: translateY(-600px) rotateZ(0deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="rocket"></div>
+
+	<script>
+		// Wait for the page to load before starting the animation
+		window.addEventListener('load', function() {
+			document.querySelector('.rocket').style.display = 'block';
+		});
+	</script>
+</body>
+</html>

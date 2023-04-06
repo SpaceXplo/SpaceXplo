@@ -1,0 +1,28 @@
+
+.video_selector{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -999;
+}
+div{
+    font-family: vardhana;
+    font-size: 45px;
+    font-weight: 900;
+    color: rgb(236, 233, 10);
+    text-align: center;
+    margin-top: 200px;
+
+}
+button{
+    background: transparent;
+}
+button a{
+    font-size: 28px;
+    color: rgb(9, 226, 9);
+    text-decoration: none;
+}
